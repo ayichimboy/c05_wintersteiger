@@ -72,30 +72,31 @@ st.title('Measured Oil Over Time')
 st.write('### Data', df_oil)
 
 # Plot the data
-plt.figure(figsize=(10, 6))
-plt.plot(df_oil['Date Created'], df_oil['Measured Oil'], marker='o', linestyle='-', color='g')
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(df_oil['Date Created'], df_oil['Measured Oil'], marker='o', linestyle='-', color='g')
 
 
 #mean
-plt.axhline(y=19.028, color='black', linestyle='--', linewidth=1)
+ax.axhline(y=19.028, color='black', linestyle='--', linewidth=1)
 #2SD+
-plt.axhline(y=19.605739, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=19.605739, color='orange', linestyle='-.', linewidth=1)
 #3SD+
-plt.axhline(y=19.894609, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=19.894609, color='r', linestyle='-.', linewidth=1)
 #2SD-
-plt.axhline(y=18.450261, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=18.450261, color='orange', linestyle='-.', linewidth=1)
 #3SD-
-plt.axhline(y=18.161391, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=18.161391, color='r', linestyle='-.', linewidth=1)
 
 
-plt.title('Oil - C05 Wintersteiger [New]', fontsize = 16)
-plt.xlabel('Date Analyzed', fontsize = 16)
-plt.ylabel('Measured Oil', fontsize = 16)
-plt.grid(False)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
-
+ax.set_title('Oil - C05 Wintersteiger [New]', fontsize = 16)
+ax.set_xlabel('Date Analyzed', fontsize = 16)
+ax.set_ylabel('Measured Oil', fontsize = 16)
+#ax.plt.grid(False)
+ax.grid(False)
+ax.tick_params(axis='x', rotation=45, labelsize=16)
+ax.tick_params(axis='y', labelsize=16)
+#ax.legend(fontsize=16)
+st.pyplot(fig)
 
 ##------------------------------PROTEIN-----------------------
 
@@ -107,29 +108,30 @@ st.title('Measured Protein Over Time')
 st.write('### Data', df_protein)
 
 # Plot the data
-plt.figure(figsize=(10, 6))
-plt.plot(df_protein['Date Created'], df_protein['Measured Protein'], marker='o', linestyle='-', color='g')
+fig, ax = plt.subplots(figsize=(10, 6))
+ax.plot(df_protein['Date Created'], df_protein['Measured Protein'], marker='o', linestyle='-', color='g')
 
 
 #mean
-plt.axhline(y=44.74867, color='black', linestyle='--', linewidth=1)
+ax.axhline(y=44.74867, color='black', linestyle='--', linewidth=1)
 #2SD+
-plt.axhline(y=45.69376, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=45.69376, color='orange', linestyle='-.', linewidth=1)
 #3SD+
-plt.axhline(y=46.1663, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=46.1663, color='r', linestyle='-.', linewidth=1)
 #2SD-
-plt.axhline(y=43.80358, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=43.80358, color='orange', linestyle='-.', linewidth=1)
 #3SD-
-plt.axhline(y=43.33103, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=43.33103, color='r', linestyle='-.', linewidth=1)
 
 
-plt.title('Protein - C05 Wintersteiger [New]', fontsize = 16)
-plt.xlabel('Date Analyzed', fontsize = 16)
-plt.ylabel('Measured Protein', fontsize = 16)
-plt.grid(False)
-plt.xticks(rotation=45)
-plt.tight_layout()
-plt.show()
+ax.set_title('Protein - C05 Wintersteiger [New]', fontsize = 16)
+ax.set_xlabel('Date Analyzed', fontsize = 16)
+ax.set_ylabel('Measured Protein', fontsize = 16)
+ax.grid(False)
+ax.tick_params(axis='x', rotation=45, labelsize=16)
+ax.tick_params(axis='y', labelsize=16)
+#ax.legend(fontsize=16)
+st.pyplot(fig)
 
 
 ##-------------------------------END-----------------------------------------
