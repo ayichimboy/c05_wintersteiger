@@ -69,7 +69,7 @@ df_protein = df_protein.sort_values("Date Created")
 st.title('Measured Oil Over Time')
 
 # Display the DataFrame
-st.write('### Data', df_oil)
+#st.write('### Data', df_oil)
 
 # Plot the data
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -105,7 +105,7 @@ st.pyplot(fig)
 st.title('Measured Protein Over Time')
 
 # Display the DataFrame
-st.write('### Data', df_protein)
+#st.write('### Data', df_protein)
 
 # Plot the data
 fig, ax = plt.subplots(figsize=(10, 6))
