@@ -271,15 +271,15 @@ ax.plot(df_c02oil['Date Created'], df_c02oil['Measured Oil'], marker='o', linest
 
 
 #mean
-ax.axhline(y=43.8499, color='black', linestyle='--', linewidth=1)
+ax.axhline(y=19.33614, color='black', linestyle='--', linewidth=1)
 #2SD+
-ax.axhline(y=44.94593, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=19.66411, color='orange', linestyle='-.', linewidth=1)
 #3SD+
-ax.axhline(y=45.49395, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=19.8281, color='r', linestyle='-.', linewidth=1)
 #2SD-
-ax.axhline(y=42.75387, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=19.00816, color='orange', linestyle='-.', linewidth=1)
 #3SD-
-ax.axhline(y=42.20585, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=18.84417, color='r', linestyle='-.', linewidth=1)
 
 
 
@@ -384,15 +384,17 @@ ax.plot(df_c02protein['Date Created'], df_c02protein['Measured Protein'], marker
 
 
 #mean
-ax.axhline(y=19.028, color='black', linestyle='--', linewidth=1)
+#mean
+ax.axhline(y=43.8499, color='black', linestyle='--', linewidth=1)
 #2SD+
-ax.axhline(y=19.605739, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=44.94593, color='orange', linestyle='-.', linewidth=1)
 #3SD+
-ax.axhline(y=19.894609, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=45.49395, color='r', linestyle='-.', linewidth=1)
 #2SD-
-ax.axhline(y=18.450261, color='orange', linestyle='-.', linewidth=1)
+ax.axhline(y=42.75387, color='orange', linestyle='-.', linewidth=1)
 #3SD-
-ax.axhline(y=18.161391, color='r', linestyle='-.', linewidth=1)
+ax.axhline(y=42.20585, color='r', linestyle='-.', linewidth=1)
+
 
 
 ax.set_title('Protein - C01 Almaco R1', fontsize = 16)
